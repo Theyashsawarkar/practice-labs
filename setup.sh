@@ -3,15 +3,28 @@ set -e
 
 echo "🚀 MongoDB Aggregation Lab — Full Reset & Seed"
 
-# 1️⃣ Start Docker containers
-echo "🐳 Starting Docker containers..."
+# 1️⃣ Ensure Docker containers are running (safe & idempotent)
+if docker ps --format '{{.Names}}' | grep -q '^mongo-agg$'; then
+  echo "♻️  MongoDB container already running"
+else
+  echo "🐳 Starting Docker containers..."
+fi
+
 docker compose up -d
 
-# 2️⃣ Wait for MongoDB
-echo "⏳ Waiting for MongoDB to be ready..."
-sleep 5
+# 2️⃣ Wait for MongoDB to actually be ready
+echo "⏳ Waiting for MongoDB to accept connections..."
 
-# 3️⃣ Drop database if exists
+until docker exec mongo-agg mongosh --quiet --eval "db.runCommand({ ping: 1 })" >/dev/null 2>&1
+do
+  printf "."
+  sleep 1
+done
+
+echo ""
+echo "✅ MongoDB is ready"
+
+# 3️⃣ Drop database if it exists
 echo "🧨 Dropping existing database (if any)..."
 docker exec -i mongo-agg mongosh --quiet <<EOF
 use ecommerce
