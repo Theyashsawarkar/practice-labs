@@ -61,6 +61,7 @@ but aggregation correctness depends on this order.
 .
 ├── docker-compose.yml
 ├── setup.sh
+├── teardown.sh
 ├── schemas/
 │   ├── user.js
 │   ├── product.js
