@@ -115,6 +115,14 @@ Each run drops the database and reseeds clean data.
 
 ---
 
+## 💀 Removal ( Undo )
+
+ ``` bash
+  ./teardown.sh
+```
+
+An interactive way to undo the lab 
+
 ## 🏁 Who This Is For
 
 Backend Engineers, Software Engineers, Data Engineers, and anyone serious about MongoDB Aggregations.
