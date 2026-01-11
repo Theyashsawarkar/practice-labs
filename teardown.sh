@@ -41,19 +41,4 @@ if [ "$REMOVE_VOLUMES" = "y" ]; then
 fi
 
 echo ""
-
-printf "👉 Remove practice-labs source code directory? (y/n): "
-read REMOVE_CODE
-if [ "$REMOVE_CODE" = "y" ]; then
-  CURRENT_DIR=$(basename "$PWD")
-  if [ "$CURRENT_DIR" = "$LAB_DIR_NAME" ]; then
-    echo "❌ Cannot delete the directory you are currently in."
-    echo "➡️  Please cd out and rerun the script."
-  else
-    echo "🔥 Removing $LAB_DIR_NAME directory..."
-    rm -rf "$LAB_DIR_NAME"
-  fi
-fi
-
-echo ""
 echo "✅ Teardown complete. Lab cleanup finished."
