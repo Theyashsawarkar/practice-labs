@@ -83,7 +83,7 @@ but aggregation correctness depends on this order.
 
 - Docker
 - Docker Compose
-- Bash (Linux / macOS)
+- Bash / Zsh 
 
 ---
 
