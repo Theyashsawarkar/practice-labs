@@ -123,6 +123,8 @@ Each run drops the database and reseeds clean data.
 
 An interactive way to undo the lab 
 
+---
+
 ## 🏁 Who This Is For
 
 Backend Engineers, Software Engineers, Data Engineers, and anyone serious about MongoDB Aggregations.
