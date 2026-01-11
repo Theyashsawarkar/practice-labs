@@ -67,3 +67,5 @@ EOF
 
 echo ""
 echo "🏁 Setup complete — clean data, fresh world, ready to aggregate 👑🔥"
+
+chmod +x ./teardown.sh
