@@ -88,9 +88,19 @@ but aggregation correctness depends on this order.
 ---
 
 ## 🚀 One-Command Setup
-
+### ✅ Option 1: Git Clone (Recommended)
 ```bash
 git clone -b feature/mongo-aggrigation https://github.com/Theyashsawarkar/practice-labs.git && cd practice-labs && chmod +x setup.sh && ./setup.sh
+```
+### ⚡ Option 2: Curl + ZIP (No Git Required)
+```bash
+curl -L -o practice-labs.zip \
+https://github.com/Theyashsawarkar/practice-labs/archive/refs/heads/feature/mongo-aggrigation.zip
+
+unzip practice-labs.zip
+cd practice-labs-feature-mongo-aggrigation
+chmod +x setup.sh
+./setup.sh
 ```
 
 ---
