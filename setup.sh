@@ -13,7 +13,7 @@ sleep 5
 
 # 3️⃣ Drop database if exists
 echo "🧨 Dropping existing database (if any)..."
-docker exec -it mongo-agg mongosh --quiet <<EOF
+docker exec -i mongo-agg mongosh --quiet <<EOF
 use ecommerce
 db.dropDatabase()
 print("💥 Database dropped successfully")
@@ -42,7 +42,7 @@ docker exec -i mongo-agg mongosh < seeds/shipments.js
 # 5️⃣ Final verification
 echo ""
 echo "🔍 Final collection counts:"
-docker exec -it mongo-agg mongosh --quiet <<EOF
+docker exec -i mongo-agg mongosh --quiet <<EOF
 use ecommerce
 print("👤 users:", db.users.countDocuments())
 print("📦 products:", db.products.countDocuments())
