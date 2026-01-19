@@ -322,12 +322,3 @@ If you want, I can:
 
 Use as you wish — MIT-style in spirit. This is a personal learning sandbox.
 
----
-
-If you want, I’ll:
-
-* create a `curl-commands.md` with ready-to-run commands,
-* add a `dev` script in `package.json` and a `nodemon.json` stub,
-* or write a short `/docs` endpoint that lists the available routes and example requests.
-
-Which of those would you like next?
